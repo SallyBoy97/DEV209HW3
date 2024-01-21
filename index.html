@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>User Form</title>
+</head>
+<body>
+    <form name="mainForm" onsubmit="return false">
+        <!-- Section 1 -->
+        <fieldset id="section1">
+            <legend>Choose User Type</legend>
+            <button onclick="toggleSections(2)">Click for New User</button>
+            <button onclick="toggleSections(3)">Click for Existing User</button>
+        </fieldset>
+    
+        <!-- Section 2 -->
+        <fieldset id="section2" disabled>
+            <legend>New User</legend>
+            <label for="newUsername">Username:</label>
+            <input type="text" id="newUsername"><br>
+            <label for="newPassword">Password:</label>
+            <input type="password" id="newPassword"><br>
+            <label for="newCity">City:</label>
+            <input type="text" id="newCity"><br>
+            <label for="newState">State:</label>
+            <input type="text" id="newState"><br>
+            <button onclick="newUserLogin()">Login</button>
+        </fieldset>
+    
+        <!-- Section 3 -->
+        <fieldset id="section3" disabled>
+            <legend>Existing User</legend>
+            <label for="existingUsername">Username:</label>
+            <input type="text" id="existingUsername"><br>
+            <label for="existingPassword">Password:</label>
+            <input type="password" id="existingPassword"><br>
+            <button onclick="existingUserLogin()">Login</button>
+        </fieldset>
+    </form>
+</body>
+</html>
